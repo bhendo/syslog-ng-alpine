@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>syslog-ng</Name>
+  <Description>syslog-ng</Description>
+  <Registry>https://registry.hub.docker.com/r/balabit/syslog-ng/</Registry>
+  <Repository>balabit/syslog-ng</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>514</HostPort>
+        <ContainerPort>514</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>601</HostPort>
+        <ContainerPort>601</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6514</HostPort>
+        <ContainerPort>6514</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/syslog-ng/config</HostDir>
+      <ContainerDir>/etc/syslog-ng</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/syslog-ng/logs</HostDir>
+      <ContainerDir>/var/log</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version>05616fd2</Version>
+  <ExtraParams></ExtraParams>
+</Container>
