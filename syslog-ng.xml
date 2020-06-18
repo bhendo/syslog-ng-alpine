@@ -8,7 +8,7 @@
   <Privileged>false</Privileged>
   <Environment/>
   <Networking>
-    <Mode>bridge</Mode>
+    <Mode>host</Mode>
     <Publish>
       <Port>
         <HostPort>514</HostPort>
@@ -29,16 +29,10 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/syslog-ng/config</HostDir>
-      <ContainerDir>/etc/syslog-ng</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
       <HostDir>/mnt/cache/appdata/syslog-ng/logs</HostDir>
       <ContainerDir>/var/log</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Version>05616fd2</Version>
   <ExtraParams></ExtraParams>
 </Container>
